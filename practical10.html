@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Nagpur</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #ede9fe, #fce7f3);
+            min-height:100vh;
+            padding:30px;
+            color:#1e293b;
+        }
+
+        .container{
+            max-width:1100px;
+            margin:auto;
+        }
+
+        header{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        header h1{
+            font-size:40px;
+            color:#1d4ed8;
+        }
+
+        header p{
+            margin-top:8px;
+            color:#475569;
+        }
+
+        .frames{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:25px;
+        }
+
+        .card{
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(8px);
+            border-radius:18px;
+            padding:20px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
+            transition:0.35s ease;
+        }
+
+        .card:hover{
+            transform: translateY(-6px);
+        }
+
+        .card h2{
+            margin-bottom:12px;
+            color:#2563eb;
+        }
+
+        iframe{
+            width:100%;
+            height:360px;
+            border:none;
+            border-radius:12px;
+        }
+
+        .footer{
+            margin-top:28px;
+            text-align:center;
+            color:#475569;
+            font-size:14px;
+        }
+
+        @media screen and (max-width: 768px){
+            .frames{
+                grid-template-columns: 1fr;
+            }
+
+            header h1{
+                font-size:30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Explore Nagpur</h1>
+        <p>Creative iframe webpage with maps and external pages</p>
+    </header>
+
+    <div class="frames">
+
+        <div class="card">
+            <h2>Discover the City</h2>
+            <iframe
+                src="https://www.wikipedia.org/"
+                title="Wikipedia"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="card">
+            <h2>Locate Nagpur</h2>
+            <iframe
+                src="https://www.google.com/maps?q=Nagpur&output=embed"
+                title="Nagpur Map"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Using HTML5 iframe to embed external content and interactive maps.
+    </div>
+
+</div>
+
+</body>
+</html>
