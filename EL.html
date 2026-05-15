@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pastel Copywriter Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#fff1f2,#fdf4ff,#ecfeff);
+    color:#5b4b66;
+    overflow-x:hidden;
+}
+
+/* SOFT BLOBS */
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    filter:blur(100px);
+    z-index:-1;
+}
+
+body::before{
+    background:#f9a8d4;
+    top:-50px;
+    left:-50px;
+}
+
+body::after{
+    background:#a5f3fc;
+    bottom:-50px;
+    right:-50px;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,0.45);
+    backdrop-filter:blur(12px);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#7c3aed;
+}
+
+.logo span{
+    color:#ec4899;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#7c3aed;
+    font-size:14px;
+    font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:60px 8% 40px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+    background:linear-gradient(to right,#a78bfa,#f472b6,#38bdf8);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    line-height:1.8;
+    color:#7b7280;
+}
+
+.hero button{
+    margin-top:25px;
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(to right,#c084fc,#f9a8d4);
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    transform:translateY(-4px);
+}
+
+/* SECTION */
+
+section{
+    padding:20px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    font-size:2rem;
+    color:#7c3aed;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.55);
+    padding:22px;
+    border-radius:22px;
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.5);
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.icon{
+    font-size:35px;
+    color:#c084fc;
+    margin-bottom:10px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#6d28d9;
+}
+
+.card p{
+    color:#7b7280;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* BOTTOM SECTION */
+
+.bottom{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    padding-bottom:50px;
+}
+
+.box{
+    background:rgba(255,255,255,0.55);
+    padding:25px;
+    border-radius:22px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.price{
+    font-size:1.8rem;
+    color:#ec4899;
+    margin:10px 0;
+}
+
+.box p{
+    margin:8px 0;
+    color:#7b7280;
+}
+
+/* FORM */
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    font-family:'Poppins',sans-serif;
+    outline:none;
+}
+
+textarea{
+    resize:none;
+}
+
+.send-btn{
+    width:100%;
+    margin-top:12px;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(to right,#c084fc,#f9a8d4);
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:15px;
+    color:#8b728f;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+Bloom<span>Ink</span>
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Pricing</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Elegant Words For Modern Brands</h1>
+
+<p>
+Creative copywriting services that help businesses attract customers,
+build trust, and create a memorable online presence.
+</p>
+
+<button>Work With Me</button>
+
+</section>
+
+<!-- SERVICES -->
+
+<section>
+
+<div class="section-title">
+<h2>Services</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<span class="material-symbols-outlined icon">language</span>
+<h3>Website Copy</h3>
+<p>Professional content designed to improve branding and engagement.</p>
+</div>
+
+<div class="card">
+<span class="material-symbols-outlined icon">edit_note</span>
+<h3>Blog Writing</h3>
+<p>SEO-friendly blogs that increase visibility and traffic.</p>
+</div>
+
+<div class="card">
+<span class="material-symbols-outlined icon">campaign</span>
+<h3>Social Media</h3>
+<p>Creative captions and promotional content for growth.</p>
+</div>
+
+<div class="card">
+<span class="material-symbols-outlined icon">mail</span>
+<h3>Email Copy</h3>
+<p>Persuasive emails that boost customer interaction.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING + CONTACT -->
+
+<section class="bottom">
+
+<div class="box">
+
+<h2>Pricing</h2>
+
+<div class="price">₹999</div>
+
+<p>✔ Website Content</p>
+<p>✔ SEO Optimization</p>
+<p>✔ Social Media Copy</p>
+<p>✔ Email Support</p>
+
+</div>
+
+<div class="box">
+
+<h2>Contact Me</h2>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="4" placeholder="Your Message"></textarea>
+
+<button class="send-btn">Send Message</button>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 BloomInk Copywriting Studio
+</footer>
+
+</body>
+</html>
